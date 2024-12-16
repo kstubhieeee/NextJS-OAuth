@@ -2,7 +2,7 @@
 
 This project demonstrates authentication in a **Next.js** application using **NextAuth.js**. The app features a sidebar navigation, dynamic user sessions, and sign-in options via **GitHub** and **Google**.
 
----
+
 
 ## Getting Started
 
@@ -52,7 +52,7 @@ To run this project, ensure you have the following installed:
    http://localhost:3000
    ```
 
----
+
 
 ## Folder Structure
 
@@ -92,7 +92,7 @@ To run this project, ensure you have the following installed:
 └─ tailwind.config.mjs
 ```
 
----
+
 
 ## Environment Variables
 
@@ -110,7 +110,7 @@ Get your credentials from:
 - **GitHub**: [GitHub Developer Settings](https://github.com/settings/developers)
 - **Google**: [Google Cloud Console](https://console.cloud.google.com/)
 
----
+
 
 ## How to Use
 
@@ -126,7 +126,7 @@ Get your credentials from:
 3. **Customize Sidebar**:
    - Add or remove sidebar links by modifying the `links` array in `Component.js`.
 
----
+
 
 ## Technologies Used
 
@@ -136,13 +136,13 @@ Get your credentials from:
 - **Framer Motion**
 - **Tabler Icons**
 
----
+
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
----
+
 
 ## Contributions
 
