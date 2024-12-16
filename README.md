@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS OAuth Demo
+
+This project demonstrates authentication in a **Next.js** application using **NextAuth.js**. The app features a sidebar navigation, dynamic user sessions, and sign-in options via **GitHub** and **Google**.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+To run this project, ensure you have the following installed:
+
+- **Node.js**: v16 or later
+- **npm** or **yarn**
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/kstubhieeee/NextJS-OAuth.git
+   cd NextJS-OAuth
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Create a `.env.local` file in the root directory and configure it based on the provided `.env.example` file:
+
+   ```
+   GITHUB_ID="your_GITHUB_ID"
+   GITHUB_SECRET="your_GITHUB_SECRET"
+   GOOGLE_CLIENT_ID="your_GOOGLE_CLIENT_ID"
+   GOOGLE_CLIENT_SECRET="your_GOOGLE_CLIENT_SECRET"
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## Folder Structure
+
+```
+📦 NextJS-OAuth
+├─ .env.example
+├─ .gitignore
+├─ README.md
+├─ app
+│  ├─ api
+│  │  └─ auth
+│  │     └─ [...nextauth]
+│  │        └─ route.js
+│  ├─ component
+│  │  └─ SessionWrapper.js
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ layout.js
+│  └─ page.js
+├─ components.json
+├─ components
+│  └─ ui
+│     └─ sidebar.jsx
+├─ jsconfig.json
+├─ lib
+│  └─ utils.js
+├─ next.config.mjs
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ next.svg
+│  ├─ vercel.svg
+│  └─ window.svg
+└─ tailwind.config.mjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Example `.env.local`
 
-## Learn More
+```env
+GITHUB_ID="your_GITHUB_ID"
+GITHUB_SECRET="your_GITHUB_SECRET"
+GOOGLE_CLIENT_ID="your_GOOGLE_CLIENT_ID"
+GOOGLE_CLIENT_SECRET="your_GOOGLE_CLIENT_SECRET"
+```
 
-To learn more about Next.js, take a look at the following resources:
+Get your credentials from:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **GitHub**: [GitHub Developer Settings](https://github.com/settings/developers)
+- **Google**: [Google Cloud Console](https://console.cloud.google.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## How to Use
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Sign In**:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Choose either **GitHub** or **Google** to sign in.
+   - Once authenticated, the app displays user details, including name and email.
+
+2. **Sign Out**:
+
+   - Click the **Sign out** button to end the session.
+
+3. **Customize Sidebar**:
+   - Add or remove sidebar links by modifying the `links` array in `Component.js`.
+
+---
+
+## Technologies Used
+
+- **Next.js**
+- **NextAuth.js**
+- **React**
+- **Framer Motion**
+- **Tabler Icons**
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contributions
+
+Feel free to fork the repository, submit issues, or create pull requests. Contributions are always welcome!
